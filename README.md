@@ -180,7 +180,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/Aakibgithuber/Deploy-Netflix-Clone-on-Kubernetes.git'
+                git branch: 'main', url: 'https://github.com/Loopjoke82/Deploy-Netflix-Clone-on-Kubernetes.git'
             }
         }
         stage("Sonarqube Analysis") {
@@ -270,7 +270,7 @@ pipeline{
         }
         stage('Checkout from Git'){
             steps{
-                git branch: 'main', url: 'https://github.com/Aakibgithuber/Deploy-Netflix-Clone-on-Kubernetes.git'
+                git branch: 'main', url: 'https://github.com/Loopjoke82/Deploy-Netflix-Clone-on-Kubernetes.git'
             }
         }
         stage("Sonarqube Analysis "){
