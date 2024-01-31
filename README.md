@@ -2,37 +2,37 @@ We plan to implement a DevSecOps CI/CD pipeline for a Netflix clone deployment. 
 
 Here's the breakdown of the pipeline stages:
 
-Workspace Cleanup:
-
+1. **Workspace Cleanup:**
 At the start of each build, we will initiate a workspace cleanup to ensure a clean environment.
-Code Checkout:
 
+2. **Code Checkout:**
 In the second stage, the code will be checked out from the Git repository.
-Code Analysis and Dependency Management:
 
-The next step involves scanning the code using SonarQube.
-Dependencies will be installed using NPM, and a file scan will be performed using Atticus.
-OWASP dependency check will be utilized to examine and validate dependencies.
-Docker Image Build:
+3. **Code Analysis and Dependency Management:**
+- The next step involves scanning the code using SonarQube.
+- Dependencies will be installed using NPM, and a file scan will be performed using Atticus.
+- OWASP dependency check will be utilized to examine and validate dependencies.
 
+4. **Docker Image Build:**
 Docker will be employed to build an image, and the resultant image will be pushed to our Docker Hub repository.
-Image Scanning:
 
+5. **Image Scanning:**
 Trivy will be used for image scanning to identify and address any vulnerabilities.
-Container Deployment and Testing:
 
-Once the image is ready, it will be deployed to a Docker container, and the output will be evaluated.
-Verification of functionality will ensure that the application works as intended.
-Kubernetes Deployment:
+6. **Container Deployment and Testing:**
+- Once the image is ready, it will be deployed to a Docker container, and the output will be evaluated.
+- Verification of functionality will ensure that the application works as intended.
 
+7. **Kubernetes Deployment:**
 Upon successful testing, the deployment will extend to our Kubernetes cluster.
-Email Notification:
 
+8. **Email Notification:**
 Throughout the entire process, email notifications will be sent to provide confirmation and updates on the pipeline status.
-Monitoring Setup:
 
-For continuous monitoring, Grafana and Prometheus will be employed.
-Monitoring will cover the Jenkins system, and Kubernetes clusters, facilitated by installing a node exporter on the Kubernetes engine. Metrics will be sent to Prometheus for analysis.
+9. **Monitoring Setup:**
+- For continuous monitoring, Grafana and Prometheus will be employed.
+- Monitoring will cover the Jenkins system, and Kubernetes clusters, facilitated by installing a node exporter on the Kubernetes engine. Metrics will be sent to Prometheus for analysis.
+
 By adopting this comprehensive approach, we aim to ensure a secure, efficient, and well-monitored deployment process for the Netflix clone.
 
 **Deploy Netflix Clone on Cloud using Jenkins - DevSecOps Project!**
